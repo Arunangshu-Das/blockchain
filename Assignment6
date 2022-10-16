@@ -1,0 +1,63 @@
+1)
+class Rectangle{
+    constructor(length,breadth)
+    {
+        this.length=length;
+        this.breadth=breadth;
+    }
+    Area(){
+        return this.breadth*this.length;
+    }
+}
+
+class Square extends Rectangle{
+    constructor(r)
+    {
+       super(r,r);
+    }
+}
+
+let obj1=new Rectangle(10,8);
+console.log("Rectangle Area ="+obj1.Area());
+
+let obj2=new Square(10);
+console.log("Square Area ="+obj2.Area());
+
+2)
+let arr=[3,45,6,7,23,5,7,8];
+
+function findLargest(r)
+{
+    let k=arr;
+    k.sort(function(a, b){return a - b});
+    k=k.reverse();
+    return k[r-1];
+}
+
+console.log(findLargest(3))
+
+3)
+function computeDash(n)
+{
+    let numToStr = n.toString();
+    let arrOfNum = numToStr.split("");
+    let n1,n2=0
+    let finalStr=arrOfNum[0];
+
+    for(let i=1;i<arrOfNum.length;i++)
+    {
+        n1 = parseInt(arrOfNum[i-1]);
+        n2 = parseInt(arrOfNum[i]);
+        if(n1%2==0 && n2%2==0)
+        {
+            finalStr=finalStr + "-" + n2.toString();
+        }
+        else
+        {
+            finalStr=finalStr + n2.toString();
+        }   
+    }
+    console.log(finalStr);
+}
+computeDash(025468);
+
