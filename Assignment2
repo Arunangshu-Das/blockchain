@@ -1,0 +1,76 @@
+1)
+let a=10,b=10,c=20;
+if(a==b==c)
+{
+    console.log("equilateral");
+}
+else if(a==b || b==c || c==a)
+{
+    console.log("isosceles");
+}
+else{
+    console.log("scalene");
+}
+
+2)
+let num=98;
+let num1=Math.floor(num/10);
+switch(num1)
+{
+    case 0:
+        case 1:
+            case 2:
+                case 3:console.log("Fail");
+                break;
+    case 4: console.log("E grade");
+    break;
+    case 5: console.log("D grade");
+    break;
+    case 6: console.log("C grade");
+    break;
+    case 7: console.log("B grade");
+    break;
+    case 8: console.log("A grade");
+    break;
+    case 9:
+    case 10: console.log("S grade");
+    break;
+    default:console.log("Invalid marks");
+}
+
+3)
+let ans=0
+for(let i=1;i<=1000;i++)
+{
+    if(i%3==0||i%5==0)
+    {
+        ans=ans+i;
+    }
+}
+console.log(ans);
+
+4)
+function fact(a)
+{
+    if(a==1|| a==0)
+    return 1;
+    return a*fact(a-1);
+}
+
+function primeno(a,b)
+{
+    for(let i=a;i<=b;i++)
+    {
+        j=2;
+        while(j<i)
+        {
+            if(i%j==0)
+            continue;
+            j++;
+        }
+        console.log(fact(i));
+    }
+}
+
+primeno(2,6);
+
