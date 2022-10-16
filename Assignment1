@@ -1,0 +1,33 @@
+1)
+let y=2020;
+if(y%4==0&&y%100!=0 || y%400==0)
+{
+    console.log("Leap year");
+}
+else
+{
+    console.log("Not a leap year");
+}
+
+
+2)
+let temp=45;
+let con=0; //to convert it Celsius to Fahrenheit 1= Celsius to Fahrenheit 0= Fahrenheit to Celsius
+if(con ==1)
+{
+    let ans=(9*temp/5)+32;
+    console.log(ans);
+}
+else{
+    let ans=5*((temp-32)/9);
+    console.log(ans);
+}
+
+3)
+let number=5;
+let ans=1;
+for(let i =2;i<=number;i++){
+    ans=ans*i;
+}
+console.log(ans); 
+
