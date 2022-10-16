@@ -1,0 +1,10 @@
+function matchHouses(a)
+{
+    if(a==1)
+    {
+        return 6;
+    }
+    return 5+matchHouses(a-1);
+}
+
+console.log(matchHouses(4));
