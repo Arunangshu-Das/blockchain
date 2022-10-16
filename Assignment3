@@ -1,0 +1,68 @@
+1)
+let h=4,count=1,s="";
+for(let i=0;i<h;i++)
+{
+    s="";
+    for(let j=0;j<=i;j++)
+    {
+        s+=count.toString();
+        s=s+" ";
+        count++;
+    }
+    console.log(s);
+}
+
+2)
+let number=153;
+let num=number,s=0;
+while(num!=0)
+{
+    let a=num%10;
+    num=Math.floor(num/10);
+    s+=(a*a*a);
+}
+if(s==number)
+console.log("Armstrong number");
+else
+console.log("Not a Armstrong number");
+
+3)
+function count(a)
+{
+    let s=0;
+    while(a!=0)
+    {
+        s=s+(a%10);
+        a=Math.floor(a/10);
+    }
+    return s;
+}
+
+function factorial(a)
+{
+    if(a==1 || a==0)
+    {
+        return 1;
+    }
+    return a*factorial(a-1);
+}
+
+function special(a)
+{
+    let sum=0;
+    while(a!=0)
+    {
+        let s=factorial(a%10);
+        sum+=count(s);
+        a=Math.floor(a/10);
+    }
+    return sum;
+}
+let a=145;
+let ans=special(a);
+let counts=count(a);
+if(ans==counts)
+console.log("special number");
+else
+console.log("Not a special number");
+
